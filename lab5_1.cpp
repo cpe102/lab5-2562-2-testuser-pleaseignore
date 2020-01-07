@@ -1,22 +1,34 @@
 #include<iostream>
+#include<string>
 using namespace std;
 
 int main(){
 	int N;
 	cout << "Enter the number of student: ";
 	cin >> N;
-	
+
 	string name[N];
 	int age[N];
-	cout << "Name of student = ";
-	cout << "Age of student = ";
+	int i = 0;
+	while (i < N){
+		cout << "Name of student = " ;
+		cin >> name[i];
+		cout << "Age of Student = " ;
+		cin >> age[i];
+		i++;
+	}
 	
 	int key;
 	cout << "--------------------------------------\n";
 	cout << "Enter an age to search: ";
 	cin >> key;
 	cout << "--------------------------------------\n";
-	
+	i = 0;
+	while (i < N){
+		if (age[i] == key)
+		cout << name[i]<<endl;
+		i++;
+	}
 
 	
 	cout << "--------------------------------------\n";
